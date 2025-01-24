@@ -172,6 +172,16 @@ public class Main extends ApplicationAdapter {
 
     private void addAllDominos() {
         //add your code here!!
+        float startX = if;
+        float startY = if;
+        int numDominoes = 10;
+        float spacing = 0.5f;
+
+        for (int i=0; i < numDominoes; i++) {
+            float X = startX + i * (DOMINO_WIDTH + spacing);
+            float Y = startY;
+            addDomino(X, Y);
+        }
     }
 
     // note - creates from center
