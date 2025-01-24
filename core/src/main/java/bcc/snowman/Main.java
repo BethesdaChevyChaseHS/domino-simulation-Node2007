@@ -33,10 +33,10 @@ public class Main extends ApplicationAdapter {
     private float WIDTH = 9;
     private float HEIGHT = 6;
     private float DOMINO_WIDTH = .2f;
-    private float DOMINO_HEIGHT  =1f;
+    private float DOMINO_HEIGHT = 1f;
 
-    private final float BOUNCINESS = .5f;
-    private final float GRAVITY = 3f;
+    private final float BOUNCINESS = 0.5f;
+    private final float GRAVITY = 2f;
 
     public void create() {
         world = new World(new Vector2(0, -GRAVITY), true);
@@ -172,15 +172,15 @@ public class Main extends ApplicationAdapter {
 
     private void addAllDominos() {
         //add your code here!!
-        float startX = if;
-        float startY = if;
-        int numDominoes = 10;
+        float startX = 1f;
+        float startY = 1f;
+        int numDominos = 10;
         float spacing = 0.5f;
 
-        for (int i=0; i < numDominoes; i++) {
-            float X = startX + i * (DOMINO_WIDTH + spacing);
-            float Y = startY;
-            addDomino(X, Y);
+        for (int i = 0; i < numDominos; i++) {
+            float x = startX + i * (DOMINO_WIDTH + spacing);
+            float y = startY;
+            addDomino(x, y);
         }
     }
 
@@ -213,7 +213,7 @@ public class Main extends ApplicationAdapter {
     private void dominoStart() {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.DynamicBody;
-        bodyDef.position.set(.5f, .5f);
+        bodyDef.position.set(.5f, 1.25f);
         bodyDef.linearVelocity.set(1.5f, 0f);
 
         Body ball = world.createBody(bodyDef);
